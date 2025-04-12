@@ -1,0 +1,86 @@
+.header {
+text-align: center;
+font-size: 24px;
+font-weight: bold;
+padding: 20px;
+width: 100%;
+position: fixed;
+top: 0;
+left: 0;
+border-bottom: 4px solid red; /* 🔴 Add this line */
+z-index: 1000; /* Optional: keep header on top */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.container {
+display: flex;
+justify-content: center;
+gap: 50px; /* Adjust spacing between the two grids */
+width: 90%;
+margin-top: 80px; /* Push content down from header */
+flex-wrap: wrap; /* Allow wrapping if needed */
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin:0;
+}
+
+.column-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.grid-button {
+    width: 120px;
+    height: 60px;
+    border: 3px solid black;
+    background-color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin: 5px 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto); /* Two buttons per row */
+    gap: 10px; /* Space between buttons */
+}
+
+/* Button hover effect */
+.grid-button:hover {
+    background-color: #ddd;
+    transform: scale(1.05);
+}
+
+/* Button click effect */
+.grid-button:active {
+    background-color: #bbb;
+    transform: scale(0.95);
+}
+
+/* Make the last row buttons wider */
+.full-width {
+    grid-column: span 2; /* Make it take full width */
+    width: 100%; /* Ensure full width */
+    justify-self: center; /* Center it in the grid */
+    text-align: center;
+}
+
+
+
+
+
